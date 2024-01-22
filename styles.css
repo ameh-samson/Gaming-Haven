@@ -193,7 +193,7 @@ header .nav ul li a:hover {
   margin-top: 2.9em;
 }
 
-.game {
+.game-img-container {
   margin-top: 2em;
   height: 232px;
 }
@@ -202,6 +202,27 @@ header .nav ul li a:hover {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.more-games {
+  display: none;
+}
+
+.load-more-btn {
+  margin-top: 2em;
+  cursor: pointer;
+  padding: 0.8em 2em;
+  background: var(--very-dark-dray);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.load-more-btn:hover {
+  background: var(--black);
+}
+
+.load-more {
+  display: block;
 }
 
 /* FOOTER */

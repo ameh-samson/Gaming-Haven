@@ -1,0 +1,123 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-dray: hsl(0, 0%, 41%);
+  --orange: hsl(39, 100%, 50%);
+
+  --ff-heading: "Josefin Sans", sans-serif;
+
+  --fs-l: clamp(3.0625rem, 2.4625rem + 3vw, 6.0625rem);
+  --fs-s: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2.5em;
+}
+
+.logo {
+  font-size: 0.5rem;
+}
+
+.logo h1 > span {
+  color: var(--orange);
+}
+
+header .menu {
+  margin-right: 0;
+}
+
+header .nav {
+  display: none;
+}
+
+/* HERO SECTION */
+
+.hero-wrapper {
+  position: relative;
+  height: 100vh;
+  background: url("/img/hero-img.jpg") center/cover no-repeat;
+  padding-inline: 2em;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.7);
+}
+
+.hero-wrapper header,
+.hero-wrapper .hero {
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
+  max-width: 800px;
+  padding-block: 10em;
+}
+
+.hero-title {
+  font-size: 3.0625rem;
+  font-size: var(--fs-l);
+  font-family: var(--ff-heading);
+  line-height: 0.9;
+}
+
+.hero-title span {
+  color: var(--orange);
+}
+
+.hero-paragraph {
+  margin-top: 1.5em;
+  font-size: var(--fs-s);
+  line-height: 1.4;
+}

@@ -7,7 +7,7 @@
 
   --ff-heading: "Josefin Sans", sans-serif;
 
-  --fs-l: clamp(3.0625rem, 2.4625rem + 3vw, 6.0625rem);
+  --fs-l: clamp(3rem, 2.4625rem + 3vw, 6.0625rem);
   --fs-s: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
 }
 
@@ -61,23 +61,20 @@ header {
   font-size: 0.5rem;
 }
 
-.logo h1 > span {
-  color: var(--orange);
-}
-
 header .menu {
   margin-right: 0;
 }
 
 header .nav {
   display: none;
+  font-size: 1.2rem;
 }
 
 /* HERO SECTION */
 
 .hero-wrapper {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: url("/img/hero-img.jpg") center/cover no-repeat;
   padding-inline: 2em;
   color: #fff;
@@ -106,7 +103,7 @@ header .nav {
 }
 
 .hero-title {
-  font-size: 3.0625rem;
+  font-size: 3rem;
   font-size: var(--fs-l);
   font-family: var(--ff-heading);
   line-height: 0.9;
@@ -117,7 +114,23 @@ header .nav {
 }
 
 .hero-paragraph {
-  margin-top: 1.5em;
+  font-size: 1.125rem;
   font-size: var(--fs-s);
   line-height: 1.4;
+  margin-top: 1em;
+}
+
+.hero .cta-btn {
+  font-size: 1.125rem;
+  color: var(--black);
+  background: var(--orange);
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.cta-btn:hover {
+  background: rgb(247, 178, 52);
+  color: var(--white);
 }

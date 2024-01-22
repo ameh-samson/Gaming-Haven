@@ -190,7 +190,12 @@ header .nav ul li a:hover {
 }
 
 .games {
-  margin-top: 2.9em;
+  max-width: 90%;
+
+  margin: 2.9em auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
 }
 
 .game-img-container {
@@ -204,11 +209,11 @@ header .nav ul li a:hover {
   width: 100%;
 }
 
-.more-games {
+.game.hidden {
   display: none;
 }
 
-.load-more-btn {
+.showMoreBtn {
   margin-top: 2em;
   cursor: pointer;
   padding: 0.8em 2em;
@@ -219,10 +224,6 @@ header .nav ul li a:hover {
 
 .load-more-btn:hover {
   background: var(--black);
-}
-
-.load-more {
-  display: block;
 }
 
 /* FOOTER */

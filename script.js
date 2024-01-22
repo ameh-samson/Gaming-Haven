@@ -3,8 +3,8 @@
 const menuBtn = document.querySelector("#menu-btn");
 menu = document.querySelector(".nav ul");
 exitBtn = document.querySelector(".exit-btn");
-loadMoreBtn = document.querySelector(".load-more-btn");
-moreGames = document.querySelectorAll(".more-games");
+showMoreBtn = document.querySelector(".showMoreBtn");
+hiddenGames = document.querySelectorAll(".game.hidden");
 
 // NAVIGATION
 
@@ -16,15 +16,19 @@ exitBtn.addEventListener("click", () => {
   menu.style.transform = "translateY(-100%)";
 });
 
-// LOAD MORE FUNCTION
+// SHOW MORE GAMES
 
-loadMoreBtn.addEventListener("click", viewMoreGames);
-
-function viewMoreGames() {
-  loadMoreBtn.textContent =
-    loadMoreBtn.textContent === "Load More" ? "Load Less" : "Load More";
-
-  moreGames.forEach((e) => {
-    e.classList.toggle("load-more");
+function showMoreGames() {
+  hiddenGames.forEach((game) => {
+    game.classList.remove("hidden");
   });
+
+  showMoreBtn.textContent =
+    showMoreBtn.textContent === "Show More" ? "Hide Games" : "Show More";
+
+  showMoreBtn.textContent === "Show More"
+    ? hiddenGames.forEach((game) => game.classList.add("hidden"))
+    : null;
 }
+
+showMoreBtn.addEventListener("click", showMoreGames);

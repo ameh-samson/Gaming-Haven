@@ -24,9 +24,9 @@ function showMoreGames() {
   });
 
   showMoreBtn.textContent =
-    showMoreBtn.textContent === "Show More" ? "Hide Games" : "Show More";
+    showMoreBtn.textContent === "See All" ? "See Less" : "See All";
 
-  showMoreBtn.textContent === "Show More"
+  showMoreBtn.textContent === "See All"
     ? hiddenGames.forEach((game) => game.classList.add("hidden"))
     : null;
 }

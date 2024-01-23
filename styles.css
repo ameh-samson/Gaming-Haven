@@ -215,12 +215,13 @@ header .nav ul li a:hover {
   margin-top: 2em;
   cursor: pointer;
   padding: 0.8em 2em;
-  background: var(--very-dark-dray);
-  color: var(--white);
+  border: 1px solid var(--dark-gray);
+  color: var(--very-dark-dray);
   border-radius: 5px;
 }
 
-.load-more-btn:hover {
+.showMoreBtn:hover {
+  color: var(--white);
   background: var(--black);
 }
 
@@ -263,4 +264,41 @@ footer.footer {
   font-size: 0.8rem;
   color: var(--dark-gray);
   margin-top: 1em;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) {
+  /* NAV */
+
+  header .menu {
+    display: none;
+  }
+
+  header .nav ul {
+    position: unset;
+    transform: unset;
+    transition: unset;
+    height: unset;
+    display: flex;
+    padding-top: 0;
+    background: unset;
+    color: var(--white);
+  }
+
+  header .nav ul li a {
+    display: flex;
+    padding-inline: 1em;
+    font-size: 1rem;
+    border-bottom: none;
+  }
+
+  header .nav ul li a:hover {
+    color: var(--orange);
+    transition: 0.3s;
+  }
+
+  .exit-btn {
+    display: none;
+  }
 }
